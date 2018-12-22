@@ -1,0 +1,206 @@
+Script iniciado em Qui 20 Dez 2018 19:15:34 -02
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ vagrant ssh devops
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-140-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+24 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Thu Dec 20 00:35:42 2018 from 10.0.2.2
+]0;vagrant@devops: ~vagrant@devops:~$ sudo su -
+     _                           
+  __| | _____   _____  _ __  ___ 
+ / _` |/ _ \ \ / / _ \| '_ \/ __|
+| (_| |  __/\ V / (_) | |_) \__ \
+ \__,_|\___| \_/ \___/| .__/|___/
+                      |_|        
+]0;root@devops: ~root@devops:~# vim .bashrc 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;44r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[44;1H".bashrc" 99L, 3124C[>c[1;1H[34m# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples[m
+figlet [35m$(hostname)[m
+[34m# If not running interactively, don't do anything[m
+[33m[[m [33m-z[m [33m"[m[35m$PS1[m[33m"[m [33m][m && [33mreturn[m
+
+[34m# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace[m
+[36mHISTCONTROL[m=ignoredups:ignorespace
+
+[34m# append to the history file, don't overwrite it[m
+[33mshopt[m [35m-s[m histappend
+
+[34m# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)[m
+[36mHISTSIZE[m=[31m1000[m
+[36mHISTFILESIZE[m=[31m2000[m
+
+[34m# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.[m
+[33mshopt[m [35m-s[m checkwinsize
+
+[34m# make less more friendly for non-text input files, see lesspipe(1)[m
+[33m[[m [33m-x[m /usr/bin/lesspipe [33m][m && [33meval[m [33m"[m[35m$(SHELL[m[33m=[m[35m/bin/sh lesspipe)[m[33m"[m
+
+[34m# set variable identifying the chroot you work in (used in the prompt below)[m
+[33mif [[m [33m-z[m [33m"[m[35m$debian_chroot[m[33m"[m [33m][m [33m&&[m [33m[[m [33m-r[m /etc/debian_chroot [33m];[m [33mthen[m
+    [36mdebian_chroot[m=[35m$(cat /etc/debian_chroot)[m
+[33mfi[m
+
+[34m# set a fancy prompt (non-color, unless we know we "want" color)[m
+[33mcase[m [33m"[m[35m$TERM[m[33m"[m [33min[m
+    xterm-color[33m)[m [36mcolor_prompt[m=yes[33m;;
+esac[m
+
+[34m# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes[m
+
+[33mif [[m [33m-n[m [33m"[m[35m$force_color_prompt[m[33m"[m [33m];[m [33mthen
+[m    [33mif [[m [33m-x[m /usr/bin/tput [33m][m [33m&&[m tput setaf [31m1[m [33m>&[m/dev/null[33m;[m [33mthen[m[43;9H[34m# We have color support; assume it's compliant with Ecma-48[m[44;153H1,1[11CTop[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[44;1H[K[44;1H:[?12l[?25hS[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l[44;4H[K[44;4H[?12l[?25h[?25l[44;3H[K[44;3H[?12l[?25h[?25l[44;2H[K[44;2H[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h[?25l [?12l[?25hn[?25l[?12l[?25hu[?25l[?12l[?25h[?25l[1;1H[33m  1 [m[34m# ~/.bashrc: executed by bash(1) for non-login shells.[m
+[33m  2 [m[34m# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)[m
+[33m  3 [m[34m# for examples[m
+[33m  4 [mfiglet [35m$(hostname)[m
+[33m  5 [m[34m# If not running interactively, don't do anything[m
+[33m  6 [[m [33m-z[m [33m"[m[35m$PS1[m[33m"[m [33m][m && [1C[33meturn
+  7 
+  8 [m[34m# don't put duplicate lines in the history. See bash(1) for more options[m
+[33m  9 [m[34m# ... or force ignoredups and ignorespace[m
+[33m 10 [m[36mHISTCONTROL[m=ignoredups:ignorespace
+[33m 11 
+ 12 [m[34m# append to the history file, don't overwrite it[m
+[33m 13 shopt[m [35m-s[m histappend
+[33m 14 
+ 15 [m[34m# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)[m
+[33m 16 [m[36mHISTSIZE[m=[31m1000[m
+[33m 17 [m[36mHISTFILESIZE[m=[31m2000[m
+[33m 18 
+ 19 [m[34m# check the window size after each command and, if necessary,[m
+[33m 20 [m[34m# update the values of LINES and COLUMNS.[m
+[33m 21 shopt[m [35m-s[m checkwinsize
+[33m 22 
+ 23 [m[34m# make less more friendly for non-text input files, see lesspipe(1)[m
+[33m 24 [[m [33m-x[m /usr/bin/lesspipe [33m][m && [33meval[m [33m"[m[35m$(SHELL[m[33m=[m[1C[35mbin/sh lesspipe)[m[33m"
+ 25 
+ 26 [m[34m# set variable identifying the chroot you work in (used in the prompt below)[m
+[33m 27 if [[m [33m-z[m [33m"[m[35m$debian_chroot[m[33m"[m [33m][m [33m&&[m [33m[[m [33m-r[m /etc/debian_chroot [33m];[m [33mthen
+ 28 [m    [36mdebian_chroot[m=[35m$(cat /etc/debian_chroot)[m
+[33m 29 fi
+ 30 
+ 31 [m[34m# set a fancy prompt (non-color, unless we know we "want" color)[m
+[33m 32 case[m [33m"[m[35m$TERM[m[33m"[m [33min
+ 33 [m    xterm-color[33m)[m [36mcolor_prompt[m=yes[33m;;
+ 34 esac
+ 35 
+ 36 [m[34m# uncomment for a colored prompt, if the terminal has the capability; turned[m
+[33m 37 [m[34m# off by default to not distract the user: the focus in a terminal window[m
+[33m 38 [m[34m# should be on the output of commands, not on the prompt[m
+[33m 39 [m[34m#force_color_prompt=yes[m
+[33m 40 
+ 41 if [[m [33m-n[m [33m"[m[35m$force_color_prompt[m[33m"[m [33m];[m [33mthen
+ 42 [m    [33mif [[m [33m-x[m /usr/bin/tput [33m][m [33m&&[m tput setaf [31m1[m [33m>&[m/dev/null[33m;[m [33mthen
+ 43 [m        [34m# We have color support; assume it's compliant with Ecma-48[m[44;153H1,1[11CTop[1;5H[?12l[?25h[?25l[44;1H[K[44;1H/[?12l[?25hf[?25l[?12l[?25hl[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h[?25l[31msearch hit BOTTOM, continuing at TOP[m[1m[37m[41mE486: Pattern not found: flig[m[44;30H[K[44;153H1,1[11CTop[1;5H[?12l[?25h[?25l[44;1H[K[44;1H/[?12l[?25hf[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25hl[?25l[?12l[?25h[?25l[152C4,1[11CTop[4;5H[?12l[?25h[?25l[44;1H[1m-- INSERT --[m[44;153H[K[44;153H4,1[11CTop[4;5H[?12l[?25h[?25l[34m#figlet $(hostname)[m[44;155H2[4;6H[?12l[?25h[44;1H[K[4;5H[?25l[44;153H4,1[11CTop[4;5H[?12l[?25h[?25l[44;153H[K[44;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l".bashrc" 99L, 3125C written
+[?1l>[?12l[?25h[?1049l]0;root@devops: ~root@devops:~# tail -f /tmp/num_sort 
+: Usuario rundeck teve o número sorteado: 28839
+Thu 20 Dec 2018 09:32:03 PM UTC: Usuario rundeck teve o número sorteado: 23472
+Thu 20 Dec 2018 09:40:42 PM UTC: Usuario rundeck teve o número sorteado: 8573
+Thu 20 Dec 2018 09:41:43 PM UTC: Usuario rundeck teve o número sorteado: 7778
+Thu 20 Dec 2018 09:42:44 PM UTC: Usuario rundeck teve o número sorteado: 1492
+Thu 20 Dec 2018 09:43:45 PM UTC: Usuario rundeck teve o número sorteado: 25261
+Thu 20 Dec 2018 09:44:46 PM UTC: Usuario rundeck teve o número sorteado: 6128
+Thu 20 Dec 2018 09:45:46 PM UTC: Usuario rundeck teve o número sorteado: 14116
+Thu 20 Dec 2018 09:46:47 PM UTC: Usuario rundeck teve o número sorteado: 21787
+Thu 20 Dec 2018 09:47:48 PM UTC: Usuario rundeck teve o número sorteado: 16560
+Thu 20 Dec 2018 09:48:49 PM UTC: Usuario rundeck teve o número sorteado: 3176
+Thu 20 Dec 2018 09:49:49 PM UTC: Usuario rundeck teve o número sorteado: 21123
+Thu 20 Dec 2018 09:50:50 PM UTC: Usuario rundeck teve o número sorteado: 2917
+Thu 20 Dec 2018 09:51:51 PM UTC: Usuario rundeck teve o número sorteado: 31950
+Thu 20 Dec 2018 09:52:52 PM UTC: Usuario rundeck teve o número sorteado: 31635
+Thu 20 Dec 2018 09:53:53 PM UTC: Usuario rundeck teve o número sorteado: 19921
+Thu 20 Dec 2018 09:54:54 PM UTC: Usuario rundeck teve o número sorteado: 19037
+Thu 20 Dec 2018 09:55:54 PM UTC: Usuario rundeck teve o número sorteado: 1997
+Thu 20 Dec 2018 09:56:55 PM UTC: Usuario rundeck teve o número sorteado: 25544
+Thu 20 Dec 2018 09:57:56 PM UTC: Usuario rundeck teve o número sorteado: 27182
+Thu 20 Dec 2018 09:58:57 PM UTC: Usuario rundeck teve o número sorteado: 1453
+Thu 20 Dec 2018 09:59:58 PM UTC: Usuario rundeck teve o número sorteado: 25325
+Thu 20 Dec 2018 10:00:58 PM UTC: Usuario rundeck teve o número sorteado: 8838
+Thu 20 Dec 2018 10:01:59 PM UTC: Usuario rundeck teve o número sorteado: 26479
+Thu 20 Dec 2018 10:03:00 PM UTC: Usuario rundeck teve o número sorteado: 4957
+Thu 20 Dec 2018 10:04:01 PM UTC: Usuario rundeck teve o número sorteado: 31790
+Thu 20 Dec 2018 10:05:02 PM UTC: Usuario rundeck teve o número sorteado: 4284
+Thu 20 Dec 2018 10:06:03 PM UTC: Usuario rundeck teve o número sorteado: 3238
+Thu 20 Dec 2018 10:07:03 PM UTC: Usuario rundeck teve o número sorteado: 11440
+Thu 20 Dec 2018 10:08:04 PM UTC: Usuario rundeck teve o número sorteado: 10915
+Thu 20 Dec 2018 10:09:05 PM UTC: Usuario rundeck teve o número sorteado: 6306
+Thu 20 Dec 2018 10:10:06 PM UTC: Usuario rundeck teve o número sorteado: 924
+Thu 20 Dec 2018 10:11:06 PM UTC: Usuario rundeck teve o número sorteado: 9100
+Thu 20 Dec 2018 10:12:07 PM UTC: Usuario rundeck teve o número sorteado: 10012
+Thu 20 Dec 2018 10:13:08 PM UTC: Usuario rundeck teve o número sorteado: 27833
+Thu 20 Dec 2018 10:14:09 PM UTC: Usuario rundeck teve o número sorteado: 21836
+Thu 20 Dec 2018 10:15:10 PM UTC: Usuario rundeck teve o número sorteado: 23182
+Thu 20 Dec 2018 10:16:10 PM UTC: Usuario rundeck teve o número sorteado: 4063
+Thu 20 Dec 2018 10:17:11 PM UTC: Usuario rundeck teve o número sorteado: 17762
+Thu 20 Dec 2018 10:18:12 PM UTC: Usuario rundeck teve o número sorteado: 1643
+Thu 20 Dec 2018 10:19:13 PM UTC: Usuario rundeck teve o número sorteado: 2358
+Thu 20 Dec 2018 10:20:14 PM UTC: Usuario rundeck teve o número sorteado: 26083
+Thu 20 Dec 2018 10:21:15 PM UTC: Usuario  teve o número sorteado: 6019
+Thu 20 Dec 2018 10:22:15 PM UTC: Usuario  teve o número sorteado: 12110
+Thu 20 Dec 2018 10:23:16 PM UTC: Usuario  teve o número sorteado: 15215
+Thu 20 Dec 2018 10:24:17 PM UTC: Usuario  teve o número sorteado: 1911
+Thu 20 Dec 2018 10:25:18 PM UTC: Usuario  teve o número sorteado: 31907
+Thu 20 Dec 2018 10:26:19 PM UTC: Usuario  teve o número sorteado: 18273
+Thu 20 Dec 2018 10:27:19 PM UTC: Usuario  teve o número sorteado: 28615
+Thu 20 Dec 2018 10:28:20 PM UTC: Usuario  teve o número sorteado: 29615
+Thu 20 Dec 2018 10:29:21 PM UTC: Usuario  teve o número sorteado: 21322
+Thu 20 Dec 2018 10:30:22 PM UTC: Usuario  teve o número sorteado: 16185
+Thu 20 Dec 2018 10:31:23 PM UTC: Usuario  teve o número sorteado: 23816
+Thu 20 Dec 2018 10:32:24 PM UTC: Usuario  teve o número sorteado: 16592
+Thu 20 Dec 2018 10:33:24 PM UTC: Usuario  teve o número sorteado: 3717
+Thu 20 Dec 2018 10:34:25 PM UTC: Usuario  teve o número sorteado: 8798
+Thu 20 Dec 2018 10:35:26 PM UTC: Usuario  teve o número sorteado: 14689
+Thu 20 Dec 2018 10:36:27 PM UTC: Usuario  teve o número sorteado: 14549
+Thu 20 Dec 2018 10:37:27 PM UTC: Usuario  teve o número sorteado: 3458
+Thu 20 Dec 2018 10:38:28 PM UTC: Usuario  teve o número sorteado: 10820
+Thu 20 Dec 2018 10:39:29 PM UTC: Usuario  teve o número sorteado: 11317
+Thu 20 Dec 2018 10:40:30 PM UTC: Usuario  teve o número sorteado: 14126
+Thu 20 Dec 2018 10:41:31 PM UTC: Usuario  teve o número sorteado: 19498
+Thu 20 Dec 2018 10:42:32 PM UTC: Usuario  teve o número sorteado: 14395
+Thu 20 Dec 2018 10:43:33 PM UTC: Usuario  teve o número sorteado: 5549
+Thu 20 Dec 2018 10:44:33 PM UTC: Usuario  teve o número sorteado: 7257
+Thu 20 Dec 2018 10:45:34 PM UTC: Usuario  teve o número sorteado: 10442
+Thu 20 Dec 2018 10:46:34 PM UTC: Usuario  teve o número sorteado: 2882
+Thu 20 Dec 2018 10:47:35 PM UTC: Usuario  teve o número sorteado: 20443
+Thu 20 Dec 2018 10:48:36 PM UTC: Usuario  teve o número sorteado: 3514
+Thu 20 Dec 2018 10:49:37 PM UTC: Usuario  teve o número sorteado: 31775
+Thu 20 Dec 2018 10:50:38 PM UTC: Usuario  teve o número sorteado: 25262
+Thu 20 Dec 2018 10:51:39 PM UTC: Usuario  teve o número sorteado: 9510
+^C
+]0;root@devops: ~root@devops:~# service puppet
+puppet        puppetserver  
+]0;root@devops: ~root@devops:~# service puppetserver stop
+]0;root@devops: ~root@devops:~# logout
+ ________________________________________
+/ Um pessimista é alguém que olha dos    \
+| dois lados antes de atravessar uma rua |
+\ de mão única --Laurence J. Peter       /
+ ----------------------------------------
+        \   ^__^
+         \  (--)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+]0;vagrant@devops: ~vagrant@devops:~$ logout
+Connection to 127.0.0.1 closed.
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ exit
+
+Script concluído em Qui 20 Dez 2018 22:28:52 -02

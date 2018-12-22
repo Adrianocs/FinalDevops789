@@ -1,0 +1,274 @@
+Script iniciado em Sex 21 Dez 2018 18:47:54 -02
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ ssh [K[K[K[Kvagrant ssh docker
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-141-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+8 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Thu Dec 20 00:28:40 2018 from 10.0.2.2
+]0;vagrant@docker: ~vagrant@docker:~$ sudo su -
+]0;root@docker: ~root@docker:~# ss -lntp
+State      Recv-Q Send-Q                                        Local Address:Port                                                       Peer Address:Port              
+LISTEN     0      128                                                       *:80                                                                    *:*                   users:(("nginx",pid=1358,fd=6),("nginx",pid=1357,fd=6),("nginx",pid=1356,fd=6))
+LISTEN     0      128                                                       *:22                                                                    *:*                   users:(("sshd",pid=1195,fd=3))
+LISTEN     0      128                                                      :::80                                                                   :::*                   users:(("nginx",pid=1358,fd=7),("nginx",pid=1357,fd=7),("nginx",pid=1356,fd=7))
+LISTEN     0      128                                                      :::22                                                                   :::*                   users:(("sshd",pid=1195,fd=4))
+]0;root@docker: ~root@docker:~# [H[2J]0;root@docker: ~root@docker:~# pwd
+/root
+]0;root@docker: ~root@docker:~# mkdir blue
+]0;root@docker: ~root@docker:~# mkdir green
+]0;root@docker: ~root@docker:~# vim [K[K[K[Kls /etc/nginx/sites-enabled/default [1P[1P[1@r[1@m
+]0;root@docker: ~root@docker:~# es[K[Kecho ""e"s"t"a" "p"a"r"t"e" "é" "d"e"o"[1P"p"o"i"s" "d"o" "a"u"t"o"m"a"t"i"o"n"."."."
+esta parte é depois do automation...
+]0;root@docker: ~root@docker:~# dp[Kocker ps
+CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS               NAMES
+f8bd7e001529        httpd               "httpd-foreground"   2 minutes ago       Up 2 minutes        80/tcp              green
+efa9458b7fd9        httpd               "httpd-foreground"   2 minutes ago       Up 2 minutes        80/tcp              blue
+]0;root@docker: ~root@docker:~# cat /etc/nginx/sites-enabled/green.conf 
+server{
+	listen 80;
+	location / { proxy_pass http://172.17.0.3 ; } #
+}
+]0;root@docker: ~root@docker:~# docker inspect green e[K[K
+[
+    {
+        "Id": "f8bd7e0015296c97e01707c95bff7249fb30f786018c6c0e3e85c4d231c865fb",
+        "Created": "2018-12-21T23:49:41.834659816Z",
+        "Path": "httpd-foreground",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 31452,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-12-21T23:49:42.314768052Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:2a51bb06dc8baa17b4d78b7ca0d87f5aadbd98d711817dbbf2cfe49211556c30",
+        "ResolvConfPath": "/var/lib/docker/containers/f8bd7e0015296c97e01707c95bff7249fb30f786018c6c0e3e85c4d231c865fb/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/f8bd7e0015296c97e01707c95bff7249fb30f786018c6c0e3e85c4d231c865fb/hostname",
+        "HostsPath": "/var/lib/docker/containers/f8bd7e0015296c97e01707c95bff7249fb30f786018c6c0e3e85c4d231c865fb/hosts",
+        "LogPath": "/var/lib/docker/containers/f8bd7e0015296c97e01707c95bff7249fb30f786018c6c0e3e85c4d231c865fb/f8bd7e0015296c97e01707c95bff7249fb30f786018c6c0e3e85c4d231c865fb-json.log",
+        "Name": "/green",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/root/green/:/usr/local/apache2/htdocs/:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": null,
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/asound",
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/3d50b212a7a8c91d2fbec722dcf88fa29e5900944e38006d2fa6704ce47ff8c1-init/diff:/var/lib/docker/overlay2/9c40cbf2eb5a3f1ce67425dfd06109078feeb08437bc5a3cef33f812da5e9f85/diff:/var/lib/docker/overlay2/a48324dd5381698184d17410ed55b47896b6426c90ce34c361825c53c98dd1bc/diff:/var/lib/docker/overlay2/0b7e4153662ebff0d220ae10a21941227046744fc96d180f25b3ce7d72166b1b/diff:/var/lib/docker/overlay2/e6ce394d6417a39010d67de58c4dd3ebfd52fc62aa0cc566fcbc831f7f5ff183/diff:/var/lib/docker/overlay2/de0dcd6798d1d2272ad9e0e5b644e20aabfd1b17747007156834a1c88a8014b3/diff",
+                "MergedDir": "/var/lib/docker/overlay2/3d50b212a7a8c91d2fbec722dcf88fa29e5900944e38006d2fa6704ce47ff8c1/merged",
+                "UpperDir": "/var/lib/docker/overlay2/3d50b212a7a8c91d2fbec722dcf88fa29e5900944e38006d2fa6704ce47ff8c1/diff",
+                "WorkDir": "/var/lib/docker/overlay2/3d50b212a7a8c91d2fbec722dcf88fa29e5900944e38006d2fa6704ce47ff8c1/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/root/green",
+                "Destination": "/usr/local/apache2/htdocs",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "f8bd7e001529",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "HTTPD_PREFIX=/usr/local/apache2",
+                "HTTPD_VERSION=2.4.37",
+                "HTTPD_SHA256=3498dc5c6772fac2eb7307dc7963122ffe243b5e806e0be4fb51974ff759d726",
+                "HTTPD_PATCHES=",
+                "APACHE_DIST_URLS=https://www.apache.org/dyn/closer.cgi?action=download&filename= \thttps://www-us.apache.org/dist/ \thttps://www.apache.org/dist/ \thttps://archive.apache.org/dist/"
+            ],
+            "Cmd": [
+                "httpd-foreground"
+            ],
+            "ArgsEscaped": true,
+            "Image": "httpd",
+            "Volumes": {
+                "/usr/local/apache2/htdocs/": {}
+            },
+            "WorkingDir": "/usr/local/apache2",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "887fe4764b5b57d6d8294714d020dd0c7afb851577b97371ab3e030101af31b7",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/887fe4764b5b",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "fbfc9ad44d9d1a5d1c9ba8f269bcddda3961c20ad9c6ff016467462ecab447ff",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.3",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:03",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "63dbe604d5e32e56aac1d7c8dc8834319b4d29adca1f407dd5c0cff2ea1d6abf",
+                    "EndpointID": "fbfc9ad44d9d1a5d1c9ba8f269bcddda3961c20ad9c6ff016467462ecab447ff",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:03",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+]0;root@docker: ~root@docker:~# exit
+logout
+]0;vagrant@docker: ~vagrant@docker:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ ls
+aula121218.log           aula_automation_181218.log  aula_docker_171218.log     aula_final_devops.log    aulda1412_docker.log   [0m[01;34mscript[0m
+aula131218.log           aula_automation_191218.log  aula_docker_181218.log     aula_final_docker.log    automation.131218.log  ubuntu-xenial-16.04-cloudimg-console.log
+aula141218.log           aula_devops_181218.log      aula_docker_191218.log     aula_puppet_171218.log   devops_201218.log      Vagrantfile
+aula1412_automation.log  aula_devops_191218.log      aula_final_automation.log  aula_rundeck_201218.log  docker131218.log
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ exit
+
+Script concluído em Sex 21 Dez 2018 22:36:04 -02

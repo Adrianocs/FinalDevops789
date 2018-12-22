@@ -1,0 +1,243 @@
+    1  su
+    2  vim .config/gtk-3.0/bookmarks 
+    3  vagrant ssh automation
+    4  exit
+    5  vagrant ssh docker
+    6  exit
+    7  mkdir infra_noturno
+    8  cd infra_noturno/
+    9  vagrant init
+   10  ls
+   11  vim Vagrantfile 
+   12  cd ..]
+   13  cd ..
+   14  ls
+   15  cd Downloads/
+   16  ls
+   17  ls -lia]
+   18  ls -lia
+   19  cd
+   20  cd infra_noturno/
+   21  mv ../Downloads/Vagrantfile 
+   22  mv ../Downloads/Vagrantfile .
+   23  vim Vagrantfile 
+   24  vagrant status
+   25  vagrant up
+   26  vagrant status
+   27  vagrant help
+   28  vagrant box list
+   29  vagrant global-status
+   30  vagrant status
+   31  vagrant ssh devops
+   32  vagrant halt
+   33  exit
+   34  vagrant status
+   35  cd infra_noturno/
+   36  vagrant status
+   37  vagrant ssh docker
+   38  vagrant --help
+   39  vagrant --help | more
+   40  sudo su -
+   41  vagrant ssh automation
+   42  script /tmp/automation.class
+   43  vim Vagrantfile 
+   44  vagrant provision
+   45  vagrant ssh devops
+   46  vagrant status
+   47  vagrant ssh docker
+   48  cd infra_noturno/
+   49  vagrant ssh automation
+   50  script /tmp/vagrant.class
+   51  vagrant ssh automation
+   52  vagrant ssh docker
+   53  vagrant ssh devops
+   54  exit
+   55  vagrant up
+   56  cd infra_noturno/
+   57  vagrant up
+   58  vagrant ssh devops
+   59  vagrant ssh docker
+   60  vagrant ssh automation
+   61  vagrant ssh docker
+   62  vagrant ssh devops
+   63  vagrant ssh docker
+   64  vagrant ssh devops
+   65  cd /tmp/
+   66  ls
+   67  cd
+   68  cd infra_noturno/
+   69  cp /tmp/aula121218.log .
+   70  ls
+   71  exit
+   72  cd infra_noturno/
+   73  ls
+   74  vagrant status
+   75  vagrant up
+   76  vagrant ssh devops
+   77  ls
+   78  ls /tmp/
+   79  script /tmp/aula121218.log
+   80  cat /tmp/aula121218.log 
+   81  ls
+   82  cd /tmp/
+   83  ls
+   84  cat aula121218.log 
+   85  cd
+   86  cd infra_noturno/
+   87  vagrant halt
+   88  exit
+   89  echo "Aumentar Memoria da devops"
+   90  vim Vagrantfile 
+   91  echo "adicionado + 3G (4096 total)"
+   92  echo "vagrant up devops --provision"
+   93  echo "depois iniciar as outras maquinas"
+   94  echo "comando vagrant up docker automation"
+   95  echo continuando o desafio2
+   96  vagrant ssh devops
+   97  cd infra_noturno/
+   98  ls
+   99  vim Vagrantfile 
+  100  vagrant up devops --provision
+  101  vagrant status
+  102  vagrant up docker automation
+  103  vagrant ssh devops
+  104  ls
+  105  script aula131218.log
+  106  ls
+  107  vagrant ssh automation
+  108  cd infra_noturno/
+  109  vagrant ssh automation
+  110  script automation.131218.log
+  111  vagrant ssh docker
+  112  vagrant halt
+  113  vagrant ssh docker
+  114  script docker131218.log
+  115  script -a docker131218.log
+  116  cat docker131218.log 
+  117  exit
+  118  vagrant up
+  119  vagrant ssh devops
+  120  vagrant ssh docker
+  121  cd infra_noturno/
+  122  vagrant ssh docker
+  123  ls
+  124  script aulda1412_docker.log
+  125  vagrant ssh automation
+  126  script aula1412_automation.log
+  127  cd infra_noturno/
+  128  ls
+  129  script aula141218.log
+  130  ls
+  131  vagrant halt
+  132  cd infra_noturno/
+  133  vagrant ssh automation
+  134  vagrant ssh docker
+  135  exit
+  136  cd infra_noturno/
+  137  vagrant ssh docker
+  138  script aula_docker_171218.log
+  139  exit
+  140  cd infra_noturno/
+  141  vagrant ssh automation
+  142  vagrant up
+  143  vagrant ssh devops
+  144  cd infra_noturno/
+  145  ls
+  146  script aula_puppet_171218.log
+  147  vagrant halt
+  148  vagrant ssh docker
+  149  vi Vagrantfile 
+  150  vagrant reload docker
+  151  vagrant ssh automation
+  152  cd infra_noturno/
+  153  script aula_automation_181218.log
+  154  vagrant up
+  155  vagrant ssh docker
+  156  cd infra_noturno/
+  157  ls
+  158  script aula_docker_181218.log
+  159  vagrant ssh devops
+  160  cd infra_noturno/
+  161  script aula_devops_181218.log
+  162  cd infra_noturno/
+  163  vagrant status
+  164  vagrant halt
+  165  vagrant status
+  166  vagrant up
+  167  vim Vagrantfile 
+  168  vagrant reload automation
+  169  vagrant ssh docker
+  170  vagrant ssh devops
+  171  vagrant ssh automation
+  172  cd infra_noturno/
+  173  ls
+  174  ls -l
+  175  script aula_devops_191218.log
+  176  vagrant ssh devops
+  177  exit
+  178  cd infra_noturno/
+  179  ls
+  180  vi aula_docker_181218.log 
+  181  script aula_docker_191218.log
+  182  vagrant ssh docker
+  183  vagrant ssh devops
+  184  cd infra_noturno/
+  185  script aula_automation_191218.log
+  186  ls
+  187  vagrant scp * devops:/tmp/adriano/
+  188  mkdir script
+  189  cd script/
+  190  git init
+  191  cp ../* .
+  192  ls
+  193  git status
+  194  git add .
+  195  git commit -m "Script 01"
+  196  git config --global user.email "adriano@teste.com"
+  197  git config --global user.name "adriano@teste.com"
+  198  git commit -m "Script 01"
+  199  ls
+  200  git status
+  201  ls /tmp/
+  202  cp /tmp/aula121218.log .
+  203  git status
+  204  ls
+  205  git add .
+  206  git status
+  207  cp ../* .
+  208  cp /tmp/aula121218.log aula_tmp_121218.log
+  209  git status
+  210  git add .
+  211  git status
+  212  git commit -m "Script 02"
+  213  git remote add https://github.com/Adrianocs/Script.git
+  214  git remote add scripts https://github.com/Adrianocs/Script.git
+  215  git push scripts master 
+  216  cd
+  217  cd -
+  218  cd ..
+  219  vagrant halt
+  220  exit
+  221  vagrant ssh devops
+  222  vagrant up
+  223  vagrant ssh automation
+  224  cd infra_noturno/
+  225  vagrant status
+  226  script aula_rundeck_201218.log
+  227  cd infra_noturno/
+  228  script devops_201218.log
+  229  vagrant halt
+  230  ls
+  231  vagrant ssh automation
+  232  ls
+  233  ls -l
+  234  ls
+  235  mkdir aulafinal
+  236  cp -r * aulafinal/
+  237  cd aulafinal/
+  238  ls
+  239  git remote add https://github.com/Adrianocs/FinalDevops.git
+  240  git init
+  241  git remote add https://github.com/Adrianocs/FinalDevops.git
+  242  git remote add AulaFinal https://github.com/Adrianocs/FinalDevops.git
+  243  history >> history.log
