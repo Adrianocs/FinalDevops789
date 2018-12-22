@@ -738,4 +738,182 @@ drwxrwxr-x 3 noturno noturno   4096 Dez 19 22:30 [0m[01;34mscript[0m
 -rw-rw-r-- 1 noturno noturno   3568 Dez 19 18:39 Vagrantfile
 ]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ ls
 aula121218.log           aula_automation_181218.log  aula_docker_171218.log     aula_final_devops.log    aulda1412_docker.log   [0m[01;34mscript[0m
-aula131218.log           aula_automation_191218.log  aula_docker_181218.log     aula_final_docker.log    automation.131218.log  ubuntu-xenial-16.
+aula131218.log           aula_automation_191218.log  aula_docker_181218.log     aula_final_docker.log    automation.131218.log  ubuntu-xenial-16.04-cloudimg-console.log
+aula141218.log           aula_devops_181218.log      aula_docker_191218.log     aula_puppet_171218.log   devops_201218.log      Vagrantfile
+aula1412_automation.log  aula_devops_191218.log      aula_final_automation.log  aula_rundeck_201218.log  docker131218.log
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ mkdir aulafinal
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ mv *[K[K[K[Kcp -r * aula
+aula121218.log              aula1412_automation.log     aula_devops_181218.log      aula_docker_181218.log      aula_final_automation.log   aula_puppet_171218.log
+aula131218.log              aula_automation_181218.log  aula_devops_191218.log      aula_docker_191218.log      aula_final_devops.log       aula_rundeck_201218.log
+aula141218.log              aula_automation_191218.log  aula_docker_171218.log      aulafinal/                  aula_final_docker.log       
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ cp -r * aula
+aula121218.log              aula1412_automation.log     aula_devops_181218.log      aula_docker_181218.log      aula_final_automation.log   aula_puppet_171218.log
+aula131218.log              aula_automation_181218.log  aula_devops_191218.log      aula_docker_191218.log      aula_final_devops.log       aula_rundeck_201218.log
+aula141218.log              aula_automation_191218.log  aula_docker_171218.log      aulafinal/                  aula_final_docker.log       
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ cp -r * aulafinal/
+cp: é impossível copiar um diretório, 'aulafinal', para si próprio, 'aulafinal/aulafinal'
+]0;noturno@ada15: ~/infra_noturnonoturno@ada15:~/infra_noturno$ cd aulafinal/
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ ls
+aula121218.log           aula_automation_181218.log  aula_docker_171218.log  aula_final_automation.log  aula_rundeck_201218.log  docker131218.log
+aula131218.log           aula_automation_191218.log  aula_docker_181218.log  aula_final_devops.log      aulda1412_docker.log     [0m[01;34mscript[0m
+aula141218.log           aula_devops_181218.log      aula_docker_191218.log  aula_final_docker.log      automation.131218.log    ubuntu-xenial-16.04-cloudimg-console.log
+aula1412_automation.log  aula_devops_191218.log      [01;34maulafinal[0m               aula_puppet_171218.log     devops_201218.log        Vagrantfile
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git[K[K[Kgit remote add https://github.com/Adrianocs/FinalDevops.git
+fatal: Not a git repository (or any of the parent directories): .git
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ gir[K[K[Kgit init
+Initialized empty Git repository in /home/noturno/infra_noturno/aulafinal/.git/
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git initremote add https://github.com/Adrianocs/FinalDevops.git
+uso: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git remote add https://github.com/Adrianocs/FinalDevops.gitAhttps://github.com/Adrianocs/FinalDevops.gituhttps://github.com/Adrianocs/FinalDevops.gitlhttps://github.com/Adrianocs/FinalDevops.gitahttps://github.com/Adrianocs/FinalDevops.gitfhttps://github.com/Adrianocs/FinalDevops.git[1Phttps://github.com/Adrianocs/FinalDevops.gitFhttps://github.com/Adrianocs/FinalDevops.gitihttps://github.com/Adrianocs/FinalDevops.gitnhttps://github.com/Adrianocs/FinalDevops.gitahttps://github.com/Adrianocs/FinalDevops.gitlhttps://github.com/Adrianocs/FinalDevops.git https://github.com/Adrianocs/FinalDevops.git
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git add .[K[K[K[K[K[K[K[K[Khistory >> history.log
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git add .
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git commo[Kit -m Fina[K[K[K[K"Final teste"
+[master (root-commit) 26d0368] Final teste
+ 35 files changed, 57404 insertions(+)
+ create mode 100644 Vagrantfile
+ create mode 100644 aula121218.log
+ create mode 100644 aula131218.log
+ create mode 100644 aula141218.log
+ create mode 100644 aula1412_automation.log
+ create mode 100644 aula_automation_181218.log
+ create mode 100644 aula_automation_191218.log
+ create mode 100644 aula_devops_181218.log
+ create mode 100644 aula_devops_191218.log
+ create mode 100644 aula_docker_171218.log
+ create mode 100644 aula_docker_181218.log
+ create mode 100644 aula_docker_191218.log
+ create mode 100644 aula_final_automation.log
+ create mode 100644 aula_final_devops.log
+ create mode 100644 aula_final_docker.log
+ create mode 100644 aula_puppet_171218.log
+ create mode 100644 aula_rundeck_201218.log
+ create mode 100644 aulafinal/aula121218.log
+ create mode 100644 aulafinal/aula131218.log
+ create mode 100644 aulafinal/aula141218.log
+ create mode 100644 aulafinal/aula1412_automation.log
+ create mode 100644 aulafinal/aula_automation_181218.log
+ create mode 100644 aulafinal/aula_automation_191218.log
+ create mode 100644 aulafinal/aula_devops_181218.log
+ create mode 100644 aulafinal/aula_devops_191218.log
+ create mode 100644 aulafinal/aula_docker_171218.log
+ create mode 100644 aulafinal/aula_docker_181218.log
+ create mode 100644 aulafinal/aula_docker_191218.log
+ create mode 100644 aulda1412_docker.log
+ create mode 100644 automation.131218.log
+ create mode 100644 devops_201218.log
+ create mode 100644 docker131218.log
+ create mode 100644 history.log
+ create mode 160000 script
+ create mode 100644 ubuntu-xenial-16.04-cloudimg-console.log
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git commit -m "Final teste"[Kgit push AulaFinal master 
+Username for 'https://github.com': adriano.csoares@gmail.com
+Password for 'https://adriano.csoares@gmail.com@github.com': 
+To https://github.com/Adrianocs/FinalDevops.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Adrianocs/FinalDevops.git'
+dica: Updates were rejected because the remote contains work that you do
+dica: not have locally. This is usually caused by another repository pushing
+dica: to the same ref. You may want to first integrate the remote changes
+dica: (e.g., 'git pull ...') before pushing again.
+dica: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git push AulaFinal master [Kgit push AulaFinal master commit -m "Final teste"add .[Khistory >> history.loggit remote add AulaFinal https://github.com/Adrianocs/FinalDevops.git[10Phttps://github.com/Adrianocs/FinalDevops.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinit[Kremote add https://github.com/Adrianocs/FinalDevops.gitAulaFinal https://github.com/Adrianocs/FinalDevops.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chistory >> history.log[K[13Pgit add .history >> history.log[13Pgit add .commit -m "Final teste"[1Ppush AulaFinal master [Kgit push AulaFinal master [Kgit push AulaFinal master 
+Username for 'https://github.com': adriano.csoares@gmail.com
+Password for 'https://adriano.csoares@gmail.com@github.com': 
+To https://github.com/Adrianocs/FinalDevops.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Adrianocs/FinalDevops.git'
+dica: Updates were rejected because the remote contains work that you do
+dica: not have locally. This is usually caused by another repository pushing
+dica: to the same ref. You may want to first integrate the remote changes
+dica: (e.g., 'git pull ...') before pushing again.
+dica: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git push AulaFinal master commit -m "Final teste"[1Ppush AulaFinal master commit -m "Final teste"add .[Khistory >> history.loggit remote add AulaFinal https://github.com/Adrianocs/FinalDevops.git[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Khttps://github.com/Adrianocs/FinalDevops789.git
+fatal: remote AulaFinal already exists.
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git remote add AulaFinal https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.gitF https://github.com/Adrianocs/FinalDevops789.giti https://github.com/Adrianocs/FinalDevops789.gita https://github.com/Adrianocs/FinalDevops789.gitn https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.git[1P https://github.com/Adrianocs/FinalDevops789.gitn https://github.com/Adrianocs/FinalDevops789.gita https://github.com/Adrianocs/FinalDevops789.gitl https://github.com/Adrianocs/FinalDevops789.gitD https://github.com/Adrianocs/FinalDevops789.gite https://github.com/Adrianocs/FinalDevops789.gitv https://github.com/Adrianocs/FinalDevops789.gito https://github.com/Adrianocs/FinalDevops789.gitp https://github.com/Adrianocs/FinalDevops789.gits https://github.com/Adrianocs/FinalDevops789.git7 https://github.com/Adrianocs/FinalDevops789.git8 https://github.com/Adrianocs/FinalDevops789.git9 https://github.com/Adrianocs/FinalDevops789.git
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git remote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5PAulaFinal[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush AulaFinal master [Kcommit -m "Final teste"add .[Khistory >> history.loggit remote add AulaFinal https://github.com/Adrianocs/FinalDevops.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chistory >> history.log[K[13Pgit add .
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ git add .remote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5PAulaFinal[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush AulaFinal master [Kcommit -m "Final teste"add .[Kcommit -m "Final teste"
+No ramo master
+nada a submeter, diretório de trabalho vazio
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ mkdir teste
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ mv * [K[K* teste/
+mv: é impossível mover 'teste' para um subdiretório de si mesmo, 'teste/teste'
+]0;noturno@ada15: ~/infra_noturno/aulafinalnoturno@ada15:~/infra_noturno/aulafinal$ cd teste/
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ ls
+aula121218.log              aula_automation_191218.log  aula_docker_191218.log     aula_puppet_171218.log   docker131218.log
+aula131218.log              aula_devops_181218.log      [0m[01;34maulafinal[0m                  aula_rundeck_201218.log  history.log
+aula141218.log              aula_devops_191218.log      aula_final_automation.log  aulda1412_docker.log     [01;34mscript[0m
+aula1412_automation.log     aula_docker_171218.log      aula_final_devops.log      automation.131218.log    ubuntu-xenial-16.04-cloudimg-console.log
+aula_automation_181218.log  aula_docker_181218.log      aula_final_docker.log      devops_201218.log        Vagrantfile
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ git init
+Initialized empty Git repository in /home/noturno/infra_noturno/aulafinal/teste/.git/
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ git initls[Kcd teste/[2@mv *[C[C[C[C[C[C[Ckdir testegit commit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[5PAulaFinal[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@FinalDevops789[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ git remote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinit[Kls[Kcd teste/[2@mv *[C[C[C[C[C[C[Ckdir testegit commit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ git add .remote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinit[Kls[Kcd teste/[2@mv *[C[C[C[C[C[C[Ckdir testegit commit -m "Final teste"add .[Kcommit -m "Final teste"
+[master (root-commit) ba8fbc0] Final teste
+ 35 files changed, 57404 insertions(+)
+ create mode 100644 Vagrantfile
+ create mode 100644 aula121218.log
+ create mode 100644 aula131218.log
+ create mode 100644 aula141218.log
+ create mode 100644 aula1412_automation.log
+ create mode 100644 aula_automation_181218.log
+ create mode 100644 aula_automation_191218.log
+ create mode 100644 aula_devops_181218.log
+ create mode 100644 aula_devops_191218.log
+ create mode 100644 aula_docker_171218.log
+ create mode 100644 aula_docker_181218.log
+ create mode 100644 aula_docker_191218.log
+ create mode 100644 aula_final_automation.log
+ create mode 100644 aula_final_devops.log
+ create mode 100644 aula_final_docker.log
+ create mode 100644 aula_puppet_171218.log
+ create mode 100644 aula_rundeck_201218.log
+ create mode 100644 aulafinal/aula121218.log
+ create mode 100644 aulafinal/aula131218.log
+ create mode 100644 aulafinal/aula141218.log
+ create mode 100644 aulafinal/aula1412_automation.log
+ create mode 100644 aulafinal/aula_automation_181218.log
+ create mode 100644 aulafinal/aula_automation_191218.log
+ create mode 100644 aulafinal/aula_devops_181218.log
+ create mode 100644 aulafinal/aula_devops_191218.log
+ create mode 100644 aulafinal/aula_docker_171218.log
+ create mode 100644 aulafinal/aula_docker_181218.log
+ create mode 100644 aulafinal/aula_docker_191218.log
+ create mode 100644 aulda1412_docker.log
+ create mode 100644 automation.131218.log
+ create mode 100644 devops_201218.log
+ create mode 100644 docker131218.log
+ create mode 100644 history.log
+ create mode 160000 script
+ create mode 100644 ubuntu-xenial-16.04-cloudimg-console.log
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ git commit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinit[Kls[Kcd teste/[2@mv *[C[C[C[C[C[C[Ckdir testegit commit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[5PAulaFinal[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush AulaFinal master [Kremote add AulaFinal https://github.com/Adrianocs/FinalDevops789.git[5@FinalDevops789[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -m "Final teste"[16Pmkdir testev * teste/[2Pcd[C[C[C[C[C[C[Cls[Kgit initls[Kcd teste/[2@mv *[C[C[C[C[C[C[Ckdir testegit commit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -m "Final teste"[16Pmkdir testegit commit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -m "Final teste"[16Pmkdir testev * teste/[2Pcd[C[C[C[C[C[C[Cls[Kgit initremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinit[Kls[Kcd teste/[2@mv *[C[C[C[C[C[C[Ckdir testegit commit -m "Final teste"add .[Kremote add FinalDevops789 https://github.com/Adrianocs/FinalDevops789.git[5PAulaFinal[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush AulaFinal master [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KFinalDevops789 master 
+Username for 'https://github.com': adriano.csoares@gmail.com
+Password for 'https://adriano.csoares@gmail.com@github.com': 
+Counting objects: 26, done.
+Delta compression using up to 4 threads.
+Compressing objects:   3% (1/26)   Compressing objects:   7% (2/26)   Compressing objects:  11% (3/26)   Compressing objects:  15% (4/26)   Compressing objects:  19% (5/26)   Compressing objects:  23% (6/26)   Compressing objects:  26% (7/26)   Compressing objects:  30% (8/26)   Compressing objects:  34% (9/26)   Compressing objects:  38% (10/26)   Compressing objects:  42% (11/26)   Compressing objects:  46% (12/26)   Compressing objects:  50% (13/26)   Compressing objects:  53% (14/26)   Compressing objects:  57% (15/26)   Compressing objects:  61% (16/26)   Compressing objects:  65% (17/26)   Compressing objects:  69% (18/26)   Compressing objects:  73% (19/26)   Compressing objects:  76% (20/26)   Compressing objects:  80% (21/26)   Compressing objects:  84% (22/26)   Compressing objects:  88% (23/26)   Compressing objects:  92% (24/26)   Compressing objects:  96% (25/26)   Compressing objects: 100% (26/26)   Compressing objects: 100% (26/26), done.
+Writing objects:   3% (1/26)   Writing objects:   7% (2/26)   Writing objects:  11% (3/26)   Writing objects:  19% (5/26)   Writing objects:  23% (6/26)   Writing objects:  30% (8/26)   Writing objects:  34% (9/26)   Writing objects:  42% (11/26)   Writing objects:  46% (12/26)   Writing objects:  50% (13/26)   Writing objects:  53% (14/26)   Writing objects:  57% (15/26)   Writing objects:  61% (16/26)   Writing objects:  65% (17/26)   Writing objects:  69% (18/26)   Writing objects:  73% (19/26)   Writing objects:  76% (20/26)   Writing objects:  80% (21/26)   Writing objects:  88% (23/26)   Writing objects:  92% (24/26)   Writing objects:  96% (25/26)   Writing objects: 100% (26/26)   Writing objects: 100% (26/26), 595.57 KiB | 0 bytes/s, done.
+Total 26 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), done.[K
+To https://github.com/Adrianocs/FinalDevops789.git
+ * [new branch]      master -> master
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ ls
+aula121218.log              aula_automation_191218.log  aula_docker_191218.log     aula_puppet_171218.log   docker131218.log
+aula131218.log              aula_devops_181218.log      [0m[01;34maulafinal[0m                  aula_rundeck_201218.log  history.log
+aula141218.log              aula_devops_191218.log      aula_final_automation.log  aulda1412_docker.log     [01;34mscript[0m
+aula1412_automation.log     aula_docker_171218.log      aula_final_devops.log      automation.131218.log    ubuntu-xenial-16.04-cloudimg-console.log
+aula_automation_181218.log  aula_docker_181218.log      aula_final_docker.log      devops_201218.log        Vagrantfile
+]0;noturno@ada15: ~/infra_noturno/aulafinal/testenoturno@ada15:~/infra_noturno/aulafinal/teste$ lsgit push FinalDevops789 master [4Pcommit -m "Final teste"add .[Kcommit -m "Final teste"push FinalDevops789 master ls[K[Kexit
+exit
+
+Script concluído em Sex 21 Dez 2018 22:45:12 -02
